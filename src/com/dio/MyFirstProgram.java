@@ -10,10 +10,10 @@ public class MyFirstProgram
 
 
         Scanner input = new Scanner(System.in);
-        double valor;
+        int valor;
 
         System.out.print("Enter the order value: ");
-        valor = input.nextDouble();
+        valor = input.nextInt();
 
         Order order = new Order("code123", valor);
 
