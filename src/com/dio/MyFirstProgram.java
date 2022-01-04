@@ -17,6 +17,7 @@ public class MyFirstProgram
 
         Order order = new Order("code123", valor);
 
+        //order.calculateFee();
         System.out.println(order);
 
     }

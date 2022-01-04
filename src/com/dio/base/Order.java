@@ -1,7 +1,5 @@
 package com.dio.base;
 
-import java.math.BigDecimal;
-
 public class Order {
 
     private final String code;
@@ -9,7 +7,7 @@ public class Order {
 
     public Order(String code, int totalValue) {
         this.code = code;
-        this.totalValue = totalValue;
+        this.totalValue = (int) calculateFee(totalValue);
     }
 
     @Override
@@ -20,14 +18,14 @@ public class Order {
                 '}';
     }
 
-    public double calculateFee() {
+    public double calculateFee(int totalValue) {
 /*        if (totalValue > 100){
             return totalValue * 0.99;
         } else {
             return totalValue;
         }*/
 
-        switch (this.totalValue){
+        switch (totalValue) {
             case 100:
                 return totalValue * 0.99;
             case 200:
